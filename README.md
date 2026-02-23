@@ -162,6 +162,5 @@ MIT - Feel free to use this template for your own portfolio
 ## Contact
 
 For inquiries:
-- Email: muzammil@example.com
-- LinkedIn: [Your LinkedIn Profile]
-- GitHub: [Your GitHub Profile]
+- Email: muzammilkhaliq7894@gmail.com
+
