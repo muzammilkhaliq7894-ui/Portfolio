@@ -112,7 +112,33 @@ npm run preview
 ### Contact Section
 - Contact information (email, phone)
 - Social media links
-- Contact form with validation
+- Contact form with validation and backend email delivery
+
+## Contact Backend API
+
+This project now includes a full backend in [backend](backend) for sending contact messages directly to `muzammilkhaliq7894@gmail.com` using Node.js, Express, and Nodemailer.
+
+### Backend Quick Start
+
+1. Go to [backend](backend)
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Create `.env` from `.env.example`
+4. Start backend:
+
+```bash
+npm run dev
+```
+
+API endpoint:
+
+- `POST /send-message`
+
+Detailed setup, Gmail App Password guide, sample HTML form, and deployment steps are in [backend/README.md](backend/README.md).
 
 ## Customization
 
@@ -120,8 +146,16 @@ npm run preview
 
 Edit `src/utils/constants.ts`:
 ```typescript
-export const CONTACT_EMAIL = 'your@email.com'
+export const CONTACT_EMAIL = 'muzammilkhaliq7894@gmail.com'
 export const CONTACT_PHONE = '+92-XXX-XXXXXXX'
+```
+
+### Frontend API URL
+
+Create a frontend `.env` file in the project root:
+
+```env
+VITE_CONTACT_API_URL=http://localhost:5000
 ```
 
 ### Update Portfolio Data
@@ -163,4 +197,9 @@ MIT - Feel free to use this template for your own portfolio
 
 For inquiries:
 - Email: muzammilkhaliq7894@gmail.com
+<<<<<<< HEAD
 
+=======
+- LinkedIn: https://www.linkedin.com/in/muzammilkhaliq-insights
+- GitHub: https://github.com/muzammilkhaliq7894-ui
+>>>>>>> 20f6097 (Update Contact Us form with Formspree and clean website)

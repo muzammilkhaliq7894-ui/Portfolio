@@ -1,21 +1,16 @@
-import { useState, useEffect } from 'react'
-import emailjs from '@emailjs/browser'
+import { useState } from 'react'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
-import { Mail, Phone, Instagram, Linkedin, Send, Github } from 'lucide-react'
+import { Mail, Phone, Instagram, Linkedin, Send, Github, CheckCircle2, Loader2 } from 'lucide-react'
 import { CONTACT_EMAIL, CONTACT_PHONE, LINKEDIN_URL, GITHUB_URL, INSTAGRAM_URL } from '../utils/constants'
-import { EMAILJS_CONFIG } from '../config/emailjs'
+
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xwvwqnep'
 
 export const Contact = () => {
   const { ref, isVisible } = useIntersectionObserver()
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
+  const [isSending, setIsSending] = useState(false)
   const [error, setError] = useState('')
-
-  useEffect(() => {
-    // Initialize EmailJS with your public key
-    emailjs.init(EMAILJS_CONFIG.publicKey)
-  }, [])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -24,27 +19,39 @@ export const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setIsLoading(true)
+    setIsSending(true)
+    setSubmitted(false)
     setError('')
 
     try {
-      await emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, {
-        to_email: CONTACT_EMAIL,
-        from_name: formData.name,
-        from_email: formData.email,
-        message: formData.message,
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: `Portfolio message from ${formData.name}`,
+        }),
       })
+
+      const result = await response.json().catch(() => ({}))
+      if (!response.ok) {
+        throw new Error(result?.errors?.[0]?.message || result?.message || 'Failed to send message')
+      }
 
       setSubmitted(true)
       setFormData({ name: '', email: '', message: '' })
       setTimeout(() => {
         setSubmitted(false)
-      }, 3000)
+      }, 3500)
     } catch (err) {
-      console.error('Error sending email:', err)
-      setError('Failed to send message. Please try again later.')
+      setError(err instanceof Error ? err.message : 'Failed to send message. Please try again.')
     } finally {
-      setIsLoading(false)
+      setIsSending(false)
     }
   }
 
@@ -185,16 +192,20 @@ export const Contact = () => {
 
                 <button
                   type="submit"
-                  disabled={isLoading}
+                  disabled={isSending}
                   className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-3 rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 hover:scale-105 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <Send size={20} />
-                  {isLoading ? 'Sending...' : 'Send Message'}
+                  {isSending ? <Loader2 size={20} className="animate-spin" /> : <Send size={20} />}
+                  {isSending ? 'Sending...' : 'Send Message'}
                 </button>
 
                 {submitted && (
-                  <div className="p-4 bg-cyan-500/20 border border-cyan-500/50 text-cyan-300 rounded-lg text-center animate-fadeIn">
-                    ✓ Message sent successfully! I'll get back to you soon.
+                  <div className="p-4 bg-cyan-500/20 border border-cyan-500/50 text-cyan-200 rounded-lg text-center animate-fadeInScale">
+                    <div className="flex items-center justify-center gap-2 text-cyan-300 font-semibold mb-1 animate-glow rounded-md py-1">
+                      <CheckCircle2 size={20} className="animate-pulse" />
+                      <span>Message Sent</span>
+                    </div>
+                    <p className="text-sm text-cyan-100/90">Your message was sent successfully. I will get back to you soon.</p>
                   </div>
                 )}
 
