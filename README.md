@@ -1,205 +1,123 @@
-# Muzammil's Portfolio Website
+# 👨‍💻 Muzammil — AI & Data Science Portfolio
 
-A modern, professional portfolio website showcasing Muzammil's expertise in AI Engineering and Data Science.
+<p align="center">
+  <img src="https://img.shields.io/badge/AI%20Engineer-000000?style=for-the-badge&logo=openai&logoColor=white" />
+  <img src="https://img.shields.io/badge/Data%20Science-0A66C2?style=for-the-badge&logo=databricks&logoColor=white" />
+  <img src="https://img.shields.io/badge/Machine%20Learning-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" />
+</p>
 
-## Features
+<p align="center">
+  <b>Modern portfolio website showcasing my projects, skills, and experience in AI, Machine Learning, Data Science, and Software Development.</b>
+</p>
 
-- ✨ **Modern Design**: Clean, minimalist layout with blue and white color scheme
-- 🎬 **Smooth Animations**: Typing effect, fade-ins, slide-ups, and hover effects
-- 📱 **Fully Responsive**: Mobile-first design that works on all devices
-- ♿ **Accessibility**: Semantic HTML and accessible components
-- ⚡ **Performance**: Fast loading with optimized assets
-- 🎯 **SEO Optimized**: Meta tags and semantic markup
+<p align="center">
+  🌐 <a href="https://muzammilkhaliq-insights.vercel.app/"><b>Visit My Portfolio</b></a>
+</p>
 
-## Tech Stack
+---
 
-- **React** 18.2 - UI library
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Styling
-- **Vite** - Build tool
-- **Lucide React** - Icons
+## 🚀 About This Portfolio
 
-## Project Structure
+This portfolio is designed to present my **technical skills, projects, education, and professional experience** through a modern and responsive interface.
 
-```
-src/
-├── components/       # React components
-│   ├── Header.tsx   # Navigation header
-│   ├── Hero.tsx     # Landing section
-│   ├── About.tsx    # About section
-│   ├── Skills.tsx   # Skills showcase
-│   ├── Services.tsx # Services offered
-│   ├── Projects.tsx # Portfolio projects
-│   ├── Contact.tsx  # Contact form
-│   └── Footer.tsx   # Footer
-├── hooks/           # Custom React hooks
-│   ├── useTypewriter.ts
-│   └── useIntersectionObserver.ts
-├── utils/           # Utility functions
-│   ├── constants.ts # App constants
-│   └── data.ts      # Portfolio data
-├── types.ts         # TypeScript types
-├── App.tsx          # Main App component
-├── main.tsx         # Entry point
-└── index.css        # Global styles
-```
+It highlights my work across:
 
-## Getting Started
+* 🤖 Artificial Intelligence & Machine Learning
+* 📊 Data Science & Analytics
+* 📈 Business Intelligence
+* 💻 Full-Stack Development
+* 🧠 AI-Powered Applications
 
-### Prerequisites
+---
 
-- Node.js 18+
-- npm or yarn
+## 🛠️ Tech Stack
 
-### Installation
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=react,typescript,tailwind,vite,python,git,github" />
+</p>
 
-```bash
-npm install
-```
+### 🤖 AI & Data
 
-### Development
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,tensorflow" />
+</p>
 
-```bash
-npm run dev
-```
+**Libraries & Tools:**
+`Pandas` · `NumPy` · `Scikit-learn` · `Matplotlib` · `Power BI` · `Jupyter`
 
-The application will be available at `http://localhost:5173`
+---
 
-### Build
+## ⭐ Featured Projects
 
-```bash
-npm run build
-```
+### 🛡️ SafeTrip
 
-### Preview Build
+**AI-Powered Travel Safety & Planning Platform**
 
-```bash
-npm run preview
-```
+A travel safety platform that analyzes real-time data and generates safety insights and recommendations.
 
-## Content Sections
+**Tech:** Flutter · FastAPI · Python · Supabase · Google Maps · AI APIs
 
-### Hero Section
-- Professional profile introduction with typing animation
-- Call-to-action buttons for portfolio and contact
+---
 
-### About Section
-- Educational background (BSCS from Sir Syed University)
-- Final Year Project (SafeTrip) details
-- Professional summary
+### 📊 Data Science Projects
 
-### Skills Section
-- AI & Machine Learning
-- Data Analysis & Business Intelligence
-- Programming Languages
-- Tools & Platforms
-- Soft Skills
-- Interactive proficiency bars
+Machine learning projects covering:
 
-### Services Section
-- AI & Machine Learning Solutions
-- Business Intelligence Services
-- Data Solutions & Analytics
+* 💳 Credit Card Fraud Detection
+* 🏠 House Price Prediction
+* 👥 Customer Churn Prediction
+* 📈 Sales Analysis
+* 🎬 Netflix Data Analysis
 
-### Projects Section
-- SafeTrip - AI-based trip planning
-- Price Prediction Model
-- Intelligent Chatbot System
-- Business Intelligence Dashboard
-- Classification & Regression Projects
-- Management Systems
+**Tech:** Python · Pandas · NumPy · Scikit-learn · XGBoost · Matplotlib
 
-### Contact Section
-- Contact information (email, phone)
-- Social media links
-- Contact form with validation and backend email delivery
+---
 
-## Contact Backend API
+### 🤖 Intelligent Chatbot
 
-This project now includes a full backend in [backend](backend) for sending contact messages directly to `muzammilkhaliq7894@gmail.com` using Node.js, Express, and Nodemailer.
+An AI-powered conversational system designed to provide intelligent responses and automate user interactions.
 
-### Backend Quick Start
+**Tech:** Python · NLP · AI · RAG
 
-1. Go to [backend](backend)
-2. Install dependencies:
+---
 
-```bash
-npm install
-```
+## 📱 Portfolio Highlights
 
-3. Create `.env` from `.env.example`
-4. Start backend:
+✨ Modern UI
+📱 Fully Responsive
+⚡ Fast & Optimized
+🎨 Clean Design
+🔗 Project Showcase
+📬 Contact Integration
 
-```bash
-npm run dev
-```
+---
 
-API endpoint:
+## 🌐 Live Portfolio
 
-- `POST /send-message`
+<p align="center">
+  <a href="https://muzammilkhaliq-insights.vercel.app/">
+    <img src="https://img.shields.io/badge/🌐%20View%20Live%20Portfolio-000000?style=for-the-badge" />
+  </a>
+</p>
 
-Detailed setup, Gmail App Password guide, sample HTML form, and deployment steps are in [backend/README.md](backend/README.md).
+---
 
-## Customization
+## 📫 Connect With Me
 
-### Update Contact Information
+<p align="center">
+  <a href="https://www.linkedin.com/in/muzammilkhaliq-insights">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://github.com/muzammilkhaliq7894-ui">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  <a href="mailto:muzammilkhaliq7894@gmail.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+</p>
 
-Edit `src/utils/constants.ts`:
-```typescript
-export const CONTACT_EMAIL = 'muzammilkhaliq7894@gmail.com'
-export const CONTACT_PHONE = '+92-XXX-XXXXXXX'
-```
+---
 
-### Frontend API URL
-
-Create a frontend `.env` file in the project root:
-
-```env
-VITE_CONTACT_API_URL=http://localhost:5000
-```
-
-### Update Portfolio Data
-
-Edit `src/utils/data.ts`:
-- `skills` - Add or modify skills
-- `services` - Add or modify services
-- `projects` - Add or modify projects
-
-### Update Colors
-
-Edit `tailwind.config.ts`:
-```typescript
-colors: {
-  primary: '#0066cc',
-  secondary: '#00a3ff',
-}
-```
-
-## Performance Optimizations
-
-- Intersection Observer for lazy animations
-- Smooth scrolling for navigation
-- Optimized animations using CSS
-- Responsive images
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## License
-
-MIT - Feel free to use this template for your own portfolio
-
-## Contact
-
-For inquiries:
-- Email: muzammilkhaliq7894@gmail.com
-<<<<<<< HEAD
-
-=======
-- LinkedIn: https://www.linkedin.com/in/muzammilkhaliq-insights
-- GitHub: https://github.com/muzammilkhaliq7894-ui
->>>>>>> 20f6097 (Update Contact Us form with Formspree and clean website)
+<p align="center">
+  <b>💡 Building practical solutions with AI, Data & Technology.</b>
+</p>
