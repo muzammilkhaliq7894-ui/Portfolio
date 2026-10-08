@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form Demo</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0f172a;
+        color: #e2e8f0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+      .card {
+        width: 100%;
+        max-width: 520px;
+        background: #111827;
+        border: 1px solid #1f2937;
+        border-radius: 12px;
+        padding: 20px;
+      }
+      h1 {
+        margin-top: 0;
+      }
+      label {
+        display: block;
+        margin: 12px 0 6px;
+      }
+      input,
+      textarea,
+      button {
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid #334155;
+        background: #0b1220;
+        color: #e2e8f0;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+      button {
+        margin-top: 14px;
+        background: #0ea5e9;
+        border: none;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      #status {
+        margin-top: 12px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Contact Us</h1>
+      <form id="contactForm">
+        <label for="name">Name</label>
+        <input id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <div id="status"></div>
+    </div>
+
+    <script>
+      const form = document.getElementById('contactForm')
+      const status = document.getElementById('status')
+      const API_BASE_URL = 'http://localhost:5000'
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault()
+
+        const formData = new FormData(form)
+        const payload = {
+          name: formData.get('name'),
+          email: formData.get('email'),
+          message: formData.get('message'),
+        }
+
+        status.textContent = 'Sending...'
+        status.style.color = '#7dd3fc'
+
+        try {
+          const response = await fetch(`${API_BASE_URL}/send-message`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+          })
+
+          const result = await response.json()
+
+          if (!response.ok || !result.success) {
+            throw new Error(result.message || 'Failed to send message')
+          }
+
+          status.textContent = 'Message sent successfully.'
+          status.style.color = '#34d399'
+          form.reset()
+        } catch (error) {
+          status.textContent = `Error: ${error.message}`
+          status.style.color = '#f87171'
+        }
+      })
+    </script>
+  </body>
+</html>
