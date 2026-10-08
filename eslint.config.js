@@ -34,4 +34,10 @@ export default [
       react: { version: '18.3' },
     },
   },
+  {
+    files: ['backend/**/*.js'],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
 ]

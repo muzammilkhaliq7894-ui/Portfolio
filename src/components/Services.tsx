@@ -1,12 +1,13 @@
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 import { services } from '../utils/data'
 import * as LucideIcons from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 
 export const Services = () => {
   const { ref, isVisible } = useIntersectionObserver()
 
   const getIcon = (iconName: string) => {
-    const iconMap: { [key: string]: React.ComponentType<any> } = {
+    const iconMap: { [key: string]: LucideIcon } = {
       Brain: LucideIcons.Brain,
       BarChart3: LucideIcons.BarChart3,
       Zap: LucideIcons.Zap,
@@ -22,11 +23,7 @@ export const Services = () => {
           ref={ref}
           className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
-<<<<<<< HEAD
           <h2 className="text-5xl font-bold text-white mb-4 text-center bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Services</h2>
-=======
-          <h2 className="text-5xl font-bold text-white mb-4 text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Services</h2>
->>>>>>> origin/main
           <p className="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
             Comprehensive solutions tailored to transform your data into insights and drive business growth.
           </p>
@@ -37,28 +34,17 @@ export const Services = () => {
               return (
                 <div
                   key={service.id}
-<<<<<<< HEAD
                   className="p-8 bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-primary/25 rounded-lg hover:border-primary transition-all hover:scale-105 group backdrop-blur-sm hover:shadow-lg hover:shadow-primary/12"
-=======
-                  className="p-8 bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-cyan-500/30 rounded-lg hover:border-cyan-400 transition-all hover:scale-105 group backdrop-blur-sm hover:shadow-lg hover:shadow-cyan-500/20"
->>>>>>> origin/main
                   style={{
                     animation: isVisible ? `slideUp 0.5s ease-out ${index * 0.1}s forwards` : 'none',
                     opacity: isVisible ? 1 : 0,
                     transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
                   }}
                 >
-<<<<<<< HEAD
                   <div className="mb-4 inline-block p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors border border-primary/25">
                     <Icon size={32} className="text-primary group-hover:text-primary/90 transition-colors" />
                   </div>
                   <h3 className="text-xl font-bold text-primary mb-3">{service.title}</h3>
-=======
-                  <div className="mb-4 inline-block p-3 bg-cyan-500/20 rounded-lg group-hover:bg-cyan-500/40 transition-colors border border-cyan-500/30">
-                    <Icon size={32} className="text-cyan-400 group-hover:text-cyan-300 transition-colors" />
-                  </div>
-                  <h3 className="text-xl font-bold text-cyan-400 mb-3">{service.title}</h3>
->>>>>>> origin/main
                   <p className="text-gray-300 leading-relaxed">{service.description}</p>
                 </div>
               )
@@ -67,21 +53,12 @@ export const Services = () => {
 
           {/* Additional Services Info */}
           <div className="mt-12 grid md:grid-cols-2 gap-8">
-<<<<<<< HEAD
             <div className="p-6 bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-lg border border-primary/25 backdrop-blur-sm hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/12">
               <h3 className="text-lg font-bold text-primary mb-3">💼 Consulting & Strategy</h3>
               <p className="text-gray-300">Expert consultation on data strategy, AI implementation, and digital transformation to maximize business value.</p>
             </div>
             <div className="p-6 bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-lg border border-primary/25 backdrop-blur-sm hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/12">
               <h3 className="text-lg font-bold text-primary mb-3">🚀 Custom Development</h3>
-=======
-            <div className="p-6 bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-lg border border-cyan-500/30 backdrop-blur-sm hover:border-cyan-400 transition-all hover:shadow-lg hover:shadow-cyan-500/20">
-              <h3 className="text-lg font-bold text-cyan-400 mb-3">💼 Consulting & Strategy</h3>
-              <p className="text-gray-300">Expert consultation on data strategy, AI implementation, and digital transformation to maximize business value.</p>
-            </div>
-            <div className="p-6 bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-lg border border-cyan-500/30 backdrop-blur-sm hover:border-cyan-400 transition-all hover:shadow-lg hover:shadow-cyan-500/20">
-              <h3 className="text-lg font-bold text-cyan-400 mb-3">🚀 Custom Development</h3>
->>>>>>> origin/main
               <p className="text-gray-300">Tailored solutions built to your unique requirements, from prototyping to production deployment.</p>
             </div>
           </div>

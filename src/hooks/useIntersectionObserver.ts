@@ -19,9 +19,10 @@ export const useIntersectionObserver = (options = {}) => {
       observer.observe(ref.current)
     }
 
+    const observedElement = ref.current
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current)
+      if (observedElement) {
+        observer.unobserve(observedElement)
       }
     }
   }, [options])
