@@ -8,6 +8,7 @@ export default {
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
         primary: '#A3E635',
         secondary: '#4ADE80',
         accent: '#D9F99D',
@@ -24,6 +25,15 @@ export default {
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial'],
       },
+=======
+        primary: '#00d4ff',
+        secondary: '#0066cc',
+        dark: {
+          bg: '#0f172a',
+          border: 'rgba(0, 163, 255, 0.2)',
+        }
+      },
+>>>>>>> origin/main
       animation: {
         fadeIn: 'fadeIn 0.5s ease-in-out',
         slideUp: 'slideUp 0.6s ease-out',

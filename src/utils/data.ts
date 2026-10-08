@@ -2,6 +2,7 @@ import { Project, Skill, Service } from '../types'
 
 export const skills: Skill[] = [
   {
+<<<<<<< HEAD
     category: 'AI-Assisted Development & GenAI',
     items: ['Claude', 'ChatGPT', 'Gemini', 'LLM application development', 'Gemini API', 'Prompt Engineering', 'LangChain'],
   },
@@ -28,6 +29,26 @@ export const skills: Skill[] = [
   {
     category: 'Engineering Practices',
     items: ['Git/GitHub', 'Software testing', 'SDLC', 'Technical documentation', 'OOP', 'Data structures & algorithms'],
+=======
+    category: 'AI & Machine Learning',
+    items: ['Model Training', 'Predictive Modeling', 'Classification', 'Regression', 'Deep Learning', 'Neural Networks'],
+  },
+  {
+    category: 'Data Analysis & BI',
+    items: ['Data Cleaning', 'EDA', 'Data Visualization', 'KPI Analysis', 'Power BI', 'Excel'],
+  },
+  {
+    category: 'Programming Languages',
+    items: ['Python', 'SQL', 'C', 'C++', 'C#', '.NET'],
+  },
+  {
+    category: 'Tools & Platforms',
+    items: ['Jupyter Notebook', 'Git & GitHub', 'Power BI', 'Excel', 'VS Code', 'Visual Studio'],
+  },
+  {
+    category: 'Soft Skills',
+    items: ['Analytical Thinking', 'Problem Solving', 'Client Communication', 'Technical Documentation'],
+>>>>>>> origin/main
   },
 ]
 
@@ -92,6 +113,7 @@ export const projects: Project[] = [
 ]
 
 export const educationBackground = {
+<<<<<<< HEAD
   degree: 'B.Sc. Computer Science',
   university: 'Sir Syed University of Engineering and Technology, Karachi',
   semester: '2022 - 2026',
@@ -137,4 +159,15 @@ export const experiences = [
 export const fyp = {
   title: 'SafeTrip - AI-Based International Trip Planning',
   description: 'An LLM-based travel safety platform using the Gemini API to analyze health and safety data and recommend safer destinations for international travelers.',
+=======
+  degree: 'Bachelor of Science in Computer Science (BSCS)',
+  university: 'Sir Syed University of Engineering & Technology',
+  semester: '7th Semester',
+  specialization: 'Data Science & AI',
+}
+
+export const fyp = {
+  title: 'SafeTrip - AI-Based International Trip Planning',
+  description: 'An intelligent application that analyzes health and safety data to recommend the safest destinations for international travelers.',
+>>>>>>> origin/main
 }

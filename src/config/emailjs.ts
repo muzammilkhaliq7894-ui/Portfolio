@@ -14,7 +14,11 @@ export const EMAILJS_CONFIG = {
 //    - Generate an App Password (not regular password)
 //    - Add the Gmail service in EmailJS dashboard
 // 3. Create an Email Template with these variables:
+<<<<<<< HEAD
 //    - {{to_email}} - Will be set to your email (muzammilkhaliq.cs@gmail.com)
+=======
+//    - {{to_email}} - Will be set to your email (muzammilkhaliq7894@gmail.com)
+>>>>>>> origin/main
 //    - {{from_name}} - Sender's name
 //    - {{from_email}} - Sender's email
 //    - {{message}} - Message content
